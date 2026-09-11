@@ -18,7 +18,11 @@ TetMesh<T>(vector<array<T,3>>& nodes, vector<array<int,4>>& mesh)
 
 TriMesh<T>(vector<array<T,3>>& nodes, vector<array<int,3>>& mesh)
 
-
+## Build on Mac OS 
+OpenGL and Glut headers have already been included in MAC OS SDK
+''' 
+clang++ main.cpp -framework OpenGL  -framework GLUT -o cutter
+'''
 ## Demo
 main.cpp is an interactive cutting interface that depends on OpenGL and GLUT. It supports drawing a curve that will be extended along the z direction into a cutting surface, dragging pieces around, rotation and shifting. For more details, please see the comments in the keyboard callback function "void key(unsigned char key, int x, int y)".
 
